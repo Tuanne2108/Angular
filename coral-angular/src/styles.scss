@@ -1,0 +1,80 @@
+@import './styles/main.scss';
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+:root {
+  --grey: #adadad;
+  --light-grey: #f5f5f5;
+  --black: #000000;
+  --white: #ffff;
+  --dark-blue: #001933;
+  --light-orange: #fff3ca;
+  --tan: #d2b48c;
+  --elephant: #22333b;
+  --beige: #5e503f;
+  --red: #ff6666;
+
+  --main-font: "Roboto", sans-serif;
+  --heading-font: "Georgia", serif;
+  --bold: 800;
+  --semi-bold: 600;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--main-font);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: var(--beige);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1 {
+  font-family: var(--heading-font);
+  font-weight: var(--semi-bold);
+  font-size: 48px;
+}
+hr {
+  width: 75%;
+  margin: 0 auto;
+  border: none;
+  border-top: 1px solid var(--grey);
+}
+input{
+  border: none;
+  border-bottom: 1px solid var(--grey);
+}
+
+.section-popular-styles,
+.newsletter-form input {
+  background-color: var(--light-grey);
+}
+
+html {
+  scroll-behavior: smooth;
+}

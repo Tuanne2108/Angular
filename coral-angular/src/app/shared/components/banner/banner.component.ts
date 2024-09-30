@@ -1,0 +1,14 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-banner',
+  standalone: true,
+  imports: [],
+  templateUrl: './banner.component.html',
+  styleUrl: './banner.component.scss',
+})
+export class BannerComponent {
+  bannerImage: string = 'assets/img/19.png';
+  bannerText: string =
+    'You Can Explore Ans Shop Many Different Collection From Various Brands Here.';
+}

@@ -1,0 +1,65 @@
+.footer-menu {
+  padding: 50px 16vh 50px 16vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .footer-overview,
+  .catalog-menu,
+  .about-us-menu,
+  .customer-services-menu {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .catalog-menu {
+    padding-left: 100px;
+  }
+
+  .social-media {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.footer-bottom-line {
+  display: flex;
+  padding: 18px 16vh 0 16vh;
+  background-color: var(--dark-blue);
+  color: var(--white);
+
+  .footer-left {
+    flex: 1;
+    text-align: left;
+  }
+
+  .footer-center {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-right {
+    flex: 1;
+    text-align: right;
+    display: none;
+
+    a {
+      transition: color 0.3s ease;
+      position: fixed;
+      bottom: 70px;
+      right: 40px;
+      padding: 10px;
+      background-color: var(--dark-blue);
+      color: var(--white);
+      opacity: 0.5;
+
+      &:hover {
+        color: var(--light-orange);
+      }
+    }
+  }
+}

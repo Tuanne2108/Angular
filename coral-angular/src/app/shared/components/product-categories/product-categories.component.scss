@@ -1,0 +1,136 @@
+.products-cards {
+  display: flex;
+  padding: 50px 16vh 50px 16vh;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  .card {
+    margin-bottom: 20px;
+    width: 20rem;
+    height: 36rem;
+    border: none;
+  }
+
+  &.slick-slide {
+    padding-bottom: 0;
+    margin: 0 15px;
+    width: 24rem;
+    height: 32rem;
+    border: none;
+  }
+}
+
+.card {
+  margin-bottom: 20px;
+  width: 20rem;
+  height: 36rem;
+  border: none;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-in-out forwards;
+
+  .card-badge {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 4px 16px;
+    font-size: 12px;
+    font-weight: var(--bold);
+
+    &.hot {
+      background: var(--red);
+    }
+  }
+
+  .card-body {
+    padding: 20px 0 10px 0;
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+  .card-price {
+    display: flex;
+    gap: 14px;
+
+    &.discount p:nth-child(1) {
+      text-decoration: line-through;
+      color: var(--grey);
+    }
+
+    &.discount p:nth-last-child(1) {
+      color: var(--red);
+    }
+  }
+
+  .card-footer {
+    display: flex;
+    padding: 0;
+    margin-top: 24px;
+    justify-content: space-between;
+    background: none;
+    border: none;
+
+    span {
+      color: var(--grey);
+    }
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.products-filter {
+  display: flex;
+  width: 78%;
+  height: auto;
+  justify-content: space-between;
+
+  .filter-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    ul {
+      display: flex;
+      gap: 30px;
+
+      a.active {
+        font-weight: var(--bold);
+      }
+    }
+  }
+
+  .filter-right button {
+    display: flex;
+    gap: 5px;
+    border: none;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

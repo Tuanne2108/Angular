@@ -1,0 +1,30 @@
+<section class="section-product-category-tabs">
+    <div class="filter">
+        <div class="products-filter">
+            <div class="filter-left">
+                <ul>
+                <li *ngFor="let type of filterList">
+                    <a href="">
+                        {{ type.name }}
+                    </a>
+                </li>
+            </ul>
+            </div>
+            <div class="filter-right">
+                <button type="button" class="btn btn-outline-primary"><i class="fa-solid fa-filter"></i>Filter</button>
+            </div>
+        </div>
+    </div>
+    <div class="products-cards">
+        <div class="card" *ngFor="let product of productList">
+            <img [src]="product.img" [alt]="product.alt" loading="lazy" class="card-img-top" />
+            <div class="card-body">
+                <h5 class="card-title">{{product.alt}}</h5>
+                <div class="card-footer">
+                    <span>{{product.type}}</span>
+                    <p>{{product.price}}</p>   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

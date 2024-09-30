@@ -1,0 +1,9 @@
+<section class="section-brands">
+  <div class="brand-logo-carousel">
+   <div class="logo-image" *ngFor="let brand of brandLogo">
+      <a [href]="brand.link" target="_blank">
+        <img [src]="brand.logo" alt="Brand Logo" loading="lazy" />
+      </a>
+    </div>
+  </div>
+</section>

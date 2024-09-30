@@ -1,0 +1,8 @@
+<section class="section-popular-styles">
+    <div class="popular-styles-text">
+        <h1>Explore new and popular styles</h1>
+    </div>
+    <div class="popular-styles-image" *ngFor="let image of imageList">
+        <img [src]="image.img" [alt]="image.alt" loading="lazy" />
+    </div>
+</section>
