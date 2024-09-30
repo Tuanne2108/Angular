@@ -8,7 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './banner.component.scss',
 })
 export class BannerComponent {
-  bannerImage: string = 'assets/img/19.png';
-  bannerText: string =
-    'You Can Explore Ans Shop Many Different Collection From Various Brands Here.';
+  banner: any = {
+    'heading':'Collections',
+    'text':'You Can Explore Ans Shop Many Different Collection From Various Brands Here.',
+    'image':'assets/img/19.png'
+  }
 }

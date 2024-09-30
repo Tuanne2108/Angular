@@ -9,27 +9,24 @@ import { CommonModule } from '@angular/common';
   templateUrl: './header.component.html',
   styleUrl   : './header.component.scss',
   encapsulation: ViewEncapsulation.None,
-  host       : {
-    'class': 'component-header'
-  }
 })
 export class HeaderComponent {
   public readonly logoImage: string = 'assets/img/logo.png';
-  public readonly navLink  : string[] = [ // @todo1: Menu thì phải có text và có link, em tổ chức lại biến navLink thành object {title: '....', link: '...'}
-    'Jewelry & Accessories',
-    'Clothing & Shoes',
-    'Home & Living',
-    'Wedding & Party',
-    'Toys & Entertainment',
-    'Art & Collectibles',
-    'Craft Supplies & Tools',
+  public readonly navLink: { name: string, url: string }[] = [
+    { 'name': 'Jewelry & Accessories', 'url': '' },
+    { 'name': 'Clothing & Shoes', 'url': '' },
+    { 'name': 'Home & Living', 'url': '' },
+    { 'name': 'Wedding & Party', 'url': '' },
+    { 'name': 'Toys & Entertainment', 'url': '' },
+    { 'name': 'Art & Collectibles', 'url': '' },
+    { 'name': 'Craft Supplies & Tools', 'url': '' }
   ];
 
   public isCollapsed: boolean = false;
 
   constructor() {}
 
-  trackByFn(index: number, item: string): number {
+  trackByFn(index: number, item: { name: string; url: string }): number {
     return index;
   }
 }

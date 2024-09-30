@@ -1,18 +1,14 @@
-.account,
-.shopping {
+.nav-link {
   a {
     display: flex;
     align-items: center;
     gap: 10px;
   }
 }
-
-.component-header {
-  .logo {
-    img {
-      margin: 0 auto;
-      max-width: 180px;
-      height: auto;
-    }
+.logo {
+  img {
+    margin: 0 auto;
+    max-width: 180px;
+    height: auto;
   }
 }

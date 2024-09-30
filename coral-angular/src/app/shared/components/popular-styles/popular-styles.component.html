@@ -1,8 +1,26 @@
-<section class="section-popular-styles">
-    <div class="popular-styles-text">
-        <h1>Explore new and popular styles</h1>
+<ng-container>
+    <div class="component-popular-styles">
+        <div class="container p-5">
+            <div class="row">
+                <!-- Left Section: Large Image -->
+                <div class="col-md-6">
+                  <div class="large-image">
+                    <img [src]="imageList[0].img" [alt]="imageList[0].alt" class="img-fluid">
+                    <div class="overlay-text">
+                      <h2 class="fs-1">Explore new and popular styles</h2>
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Right Section: Smaller Images -->
+                <div class="col-md-6 d-flex justify-content-between">
+                  <div class="row">
+                    <div class="col-6" *ngFor="let image of imageList.slice(1, 5); let i = index">
+                      <img [src]="image.img" [alt]="image.alt" class="img-fluid right-images">
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
     </div>
-    <div class="popular-styles-image" *ngFor="let image of imageList">
-        <img [src]="image.img" [alt]="image.alt" loading="lazy" />
-    </div>
-</section>
+</ng-container>

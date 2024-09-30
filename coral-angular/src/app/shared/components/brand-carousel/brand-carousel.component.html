@@ -1,9 +1,13 @@
-<section class="section-brands">
-  <div class="brand-logo-carousel">
-   <div class="logo-image" *ngFor="let brand of brandLogo">
-      <a [href]="brand.link" target="_blank">
-        <img [src]="brand.logo" alt="Brand Logo" loading="lazy" />
-      </a>
+<ng-container>
+  <div class="component-brands">
+    <div class="container p-5">
+      <div class="brands__carousel d-flex justify-content-between">
+        <div class="logo-image" *ngFor="let brand of brandLogo">
+          <a [href]="brand.url" target="_blank">
+            <img [src]="brand.logo" alt="Brand Logo" loading="lazy" />
+          </a>
+        </div>
+      </div>
     </div>
   </div>
-</section>
+</ng-container>

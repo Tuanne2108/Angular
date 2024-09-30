@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './popular-styles.component.scss',
 })
 export class PopularStylesComponent {
-  imageList = [
+  public readonly imageList: { img: string, alt: string }[] = [
     { img: 'assets/img/18.png', alt: 'main image' },
     { img: 'assets/img/01.png', alt: 'sub image 1' },
     { img: 'assets/img/02.png', alt: 'sub image 2' },

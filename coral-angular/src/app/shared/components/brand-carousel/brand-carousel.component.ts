@@ -9,20 +9,20 @@ import { CommonModule } from '@angular/common';
   styleUrl: './brand-carousel.component.scss',
 })
 export class BrandCarouselComponent {
-  brandLogo = [
+  public readonly brandLogo: { logo: string, url: string }[]=[
     {
       logo: 'assets/img/brand/01.png',
-      link: 'https://eu.louisvuitton.com/eng-e1/homepage',
+      url: 'https://eu.louisvuitton.com/eng-e1/homepage',
     },
     {
       logo: 'assets/img/brand/02.png',
-      link: 'https://www.balenciaga.com/en-en?srsltid=AfmBOoovwY-6SbVHAK2eLkIeUfQhITGCL-cR1J8imoCNTprPNoazcWew',
+      url: 'https://www.balenciaga.com/en-en?srsltid=AfmBOoovwY-6SbVHAK2eLkIeUfQhITGCL-cR1J8imoCNTprPNoazcWew',
     },
-    { logo: 'assets/img/brand/03.png', link: 'https://www.dior.com/en_vn' },
+    { logo: 'assets/img/brand/03.png', url: 'https://www.dior.com/en_vn' },
     {
       logo: 'assets/img/brand/04.png',
-      link: 'https://www.gucci.com/us/en/?srsltid=AfmBOooVlKODDPo-tbNDiiFm1TKc_ZRcTKEd_Wi__b_67i3-a0GG3esj',
+      url: 'https://www.gucci.com/us/en/?srsltid=AfmBOooVlKODDPo-tbNDiiFm1TKc_ZRcTKEd_Wi__b_67i3-a0GG3esj',
     },
-    { logo: 'assets/img/brand/05.png', link: 'https://www.ysl.com/en-us' },
+    { logo: 'assets/img/brand/05.png', url: 'https://www.ysl.com/en-us' },
   ];
 }

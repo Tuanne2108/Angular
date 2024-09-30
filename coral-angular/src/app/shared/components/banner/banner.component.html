@@ -1,13 +1,23 @@
-<section class="section-banner">
-  <div class="container">
-    <div class="hero-content">
-      <h2>Collections</h2>
-      <p>{{bannerText}}</p>
-      <button type="button" class="btn btn-outline-primary"><i class="fa-solid fa-bag-shopping"></i>Shop Now</button>
-    </div>
-
-    <div class="hero-image">
-      <img [src]="bannerImage" alt="banner image" />
+<ng-container>
+  <div class="component-banner">
+    <div class="container p-5">
+      <div class="row align-items-center">
+        <div class="col-5">
+          <!-- Content -->
+          <div class="hero-content">
+            <h2 class="fs-1 fw-semibold">{{banner.heading}}</h2>
+            <p class="fs-5">{{banner.text}}</p>
+            <button type="button" class="btn btn-outline-primary"><i
+                class="fa-solid fa-bag-shopping"></i>Shop Now</button>
+          </div>
+        </div>
+        <!-- Image -->
+        <div class="col-7 d-flex justify-content-center">
+          <div class="hero-image">
+            <img [src]="banner.image" alt="banner image" />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</section>
+</ng-container>

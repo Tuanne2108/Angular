@@ -1,20 +1,23 @@
 <ng-container>
   <div class="component-header__top">
-    <div class="container"><!-- https://getbootstrap.com/docs/4.0/layout/grid/ -->
+    <div class="container p-3">
       <div class="row align-items-center">
         <!-- Search -->
         <div class="col-6 col-md-4">
-          <div class="search-container">
+          <div class="search-container d-flex">
             <div class="search-button">
               <button type="button" class="btn btn-outline-primary"
-                      (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+                (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
+                aria-controls="collapseExample">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </div>
 
             <div class="search-input">
-              <div #collapse="ngbCollapse" [horizontal]="true" [(ngbCollapse)]="isCollapsed">
-                <input type="text" class="search-input" placeholder="Search..." />
+              <div #collapse="ngbCollapse" [horizontal]="true"
+                [(ngbCollapse)]="isCollapsed">
+                <input type="text" class="search-input"
+                  placeholder="Search..." />
               </div>
             </div>
           </div>
@@ -31,7 +34,7 @@
         <div class="col-6 col-md-4">
           <div class="user-action">
             <div class="nav-menu">
-              <ul class="nav justify-content-end"><!-- https://getbootstrap.com/docs/4.0/components/navs/ -->
+              <ul class="nav justify-content-end">
                 <li class="nav-link">
                   <a href="#">
                     <i class="fa-solid fa-user"></i>
@@ -59,16 +62,17 @@
       </div>
     </div>
   </div>
-
+  <hr>
   <!-- Navigation -->
   <div class="component-header__navigation">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="nav-menu">
-            <ul class="nav justify-content-center">
+            <ul class="nav justify-content-between align-items-center">
               <li *ngFor="let link of navLink; trackBy: trackByFn" class="item">
-                <a class="nav-link" [title]="link" href="">{{ link }}</a><!-- https://getbootstrap.com/docs/4.0/components/navs/ -->
+                <a class="nav-link" [title]="link.name" [href]="link.url">{{
+                  link.name }}</a>
               </li>
             </ul>
           </div>
